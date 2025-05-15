@@ -81,6 +81,7 @@ sudo chown worker_node:worker_node /storage/
 Master node:
 ```
 sudo apt-get install libmunge-dev libmunge2 munge -y
+sudo chown munge:munge /var/log/munge/munged.log
 sudo systemctl enable munge
 sudo systemctl start munge
 munge -n | unmunge | grep STATUS
@@ -91,6 +92,7 @@ sudo chmod 400 /storage/munge.key
 Worker node:
 ```
 sudo apt-get install libmunge-dev libmunge2 munge
+sudo chown munge:munge /var/log/munge/munged.log
 sudo cp /storage/munge.key /etc/munge/munge.key
 sudo systemctl enable munge
 sudo systemctl start munge
