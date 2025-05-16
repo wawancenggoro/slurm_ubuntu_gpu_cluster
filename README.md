@@ -104,7 +104,7 @@ munge -n | unmunge | grep STATUS
 ### Clone this repo with config and service files:
 ```
 cd /storage
-git clone https://github.com/lopentusska/slurm_ubuntu_gpu_cluster
+git clone https://github.com/wawancenggoro/slurm_ubuntu_gpu_cluster
 ```
 ### Install prerequisites for DB:
 ```
