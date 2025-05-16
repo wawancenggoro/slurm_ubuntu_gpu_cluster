@@ -87,6 +87,8 @@ sudo systemctl start munge
 munge -n | unmunge | grep STATUS
 sudo cp /etc/munge/munge.key /storage/
 sudo chown munge /storage/munge.key
+sudo chmod 444 /storage/munge.key
+# after installing munge in worker node
 sudo chmod 400 /storage/munge.key
 ```
 Worker node:
