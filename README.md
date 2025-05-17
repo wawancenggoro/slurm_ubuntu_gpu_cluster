@@ -182,7 +182,7 @@ sudo systemctl start slurmd
 ## Install Slurm on worker node:
 ```
 cd /storage
-sudo dpkg -i slurm-23.11.4_1.0_amd64.deb
+sudo dpkg -i slurm-25.05.0-0rc1_1.0_amd64.deb
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmd.service /etc/systemd/system
 ```
 Open ports for slurm communcation:
