@@ -141,8 +141,8 @@ cd ..
 ```
 ### Install Slurm
 ```
-sudo fpm -s dir -t deb -v 1.0 -n slurm-23.11.4 --prefix=/usr -C /tmp/slurm-build/ .
-sudo dpkg -i slurm-23.11.4_1.0_amd64.deb
+sudo fpm -s dir -t deb -v 1.0 -n slurm-25.05.0-0rc1 --prefix=/usr -C /tmp/slurm-build/ .
+sudo dpkg -i slurm-25.05.0-0rc1_1.0_amd64.deb
 ```
 Make directories:
 ```
