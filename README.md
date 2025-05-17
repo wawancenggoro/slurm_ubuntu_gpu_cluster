@@ -152,6 +152,7 @@ sudo chown slurm /var/spool/slurm/ctld /var/spool/slurm/d /var/log/slurm
 Copy slurm services:
 ```
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmdbd.service /etc/systemd/system/
+sudo systemctl unmask slurmctld
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmctld.service /etc/systemd/system/
 ```
 Copy slurm DB config:
@@ -175,6 +176,7 @@ sudo systemctl start slurmctld
 ```
 If master is a compute (worker) node:
 ```
+sudo systemctl unmask slurmd
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmd.service /etc/systemd/system/
 sudo systemctl enable slurmd
 sudo systemctl start slurmd
@@ -183,6 +185,7 @@ sudo systemctl start slurmd
 ```
 cd /storage
 sudo dpkg -i slurm-25.05.0-0rc1_1.0_amd64.deb
+sudo systemctl unmask slurmd
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmd.service /etc/systemd/system
 ```
 Open ports for slurm communcation:
