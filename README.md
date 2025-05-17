@@ -130,8 +130,8 @@ Copy db config: ```cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurmdb
 You should check slurm [download](https://download.schedmd.com/slurm/) page and install the latest version.
 ```
 cd /storage
-wget https://download.schedmd.com/slurm/slurm-23.11.4.tar.bz2
-tar xvjf slurm-23.11.4.tar.bz2
+wget https://download.schedmd.com/slurm/slurm-25.05-latest.tar.bz2
+tar xvjf slurm-25.05.0-0rc1
 cd slurm-23.11.4/
 ./configure --prefix=/tmp/slurm-build --sysconfdir=/etc/slurm --enable-pam --with-pam_dir=/lib/x86_64-linux-gnu/security/ --without-shared-libslurm
 make
