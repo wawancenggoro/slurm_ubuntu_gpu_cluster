@@ -256,7 +256,7 @@ on worker_node:
 ```
 sudo systemctl restart slurmd
 ```
-Create cluster: ```sudo sacctmgr add cluster compute-cluster```
+(Maybe only in masternode?) Create cluster: ```sudo sacctmgr add cluster compute-cluster```
 
 Finally:
 ```
