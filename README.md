@@ -248,9 +248,7 @@ sudo update-grub
 Reboot machines and:  
 on master_node:
 ```
-sudo systemctl restart slurmctld
-sudo systemctl restart slurmdbd
-sudo systemctl restart slurmd
+sudo systemctl restart slurmctld & sudo systemctl restart slurmdbd & sudo systemctl restart slurmd
 ```
 on worker_node:
 ```
