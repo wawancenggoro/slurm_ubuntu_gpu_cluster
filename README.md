@@ -225,7 +225,7 @@ Copy .conf files (except slurmdbd.conf) on all machines:
 on worker_node create slurm directory: ```sudo mkdir /etc/slurm/```
 ```
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/cgroup* /etc/slurm/
-sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/slurm.conf /etc/slurm/
+sudo cp /storage/slurm.conf /etc/slurm/
 sudo cp /storage/slurm_ubuntu_gpu_cluster/configs_services/gres.conf /etc/slurm/
 ```
 ```
