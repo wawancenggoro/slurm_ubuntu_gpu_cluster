@@ -254,7 +254,7 @@ on worker_node:
 ```
 sudo systemctl restart slurmd
 ```
-(Maybe only in masternode?) Create cluster: ```sudo sacctmgr add cluster compute-cluster```
+Only in master node, create cluster: ```sudo sacctmgr add cluster compute-cluster```
 
 Finally:
 ```
@@ -262,6 +262,14 @@ sudo apt update
 sudo apt upgrade
 sudo apt autoremove
 ```
+
+If the above still doesn't work, add ```Port 22``` for ssh by adding the following line to ```/etc/ssh/sshd_config```:
+```
+Port 22
+```
+
+Then, set passwordless ssh from worker nodes to master node (see the **Set up passwordless ssh section above**).
+
 # Logs
 ### If something doesn't work, you can find logs for ```slurmctld```, ```slurmdbd``` and ```slurmd``` in ```/var/log/slurm/```.
 # Script
