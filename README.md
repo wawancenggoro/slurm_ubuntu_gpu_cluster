@@ -85,6 +85,8 @@ sudo chown munge:munge /var/log/munge/munged.log
 sudo systemctl enable munge
 sudo systemctl start munge
 munge -n | unmunge | grep STATUS
+munge -n | ssh workernode1 unmunge
+munge -n | ssh workernode2 unmunge
 sudo cp /etc/munge/munge.key /storage/
 sudo chown munge /storage/munge.key
 sudo chmod 444 /storage/munge.key
@@ -99,6 +101,8 @@ sudo cp /storage/munge.key /etc/munge/munge.key
 sudo systemctl enable munge
 sudo systemctl start munge
 munge -n | unmunge | grep STATUS
+munge -n | ssh masternode unmunge
+munge -n | ssh workernode2 unmunge
 ```
 # Set up DB for Slurm
 ### Clone this repo with config and service files:
