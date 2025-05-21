@@ -32,7 +32,7 @@ on master node:
 ssh-keygen
 ssh-copy-id worker_node@222.xx.222.xx
 ```
-# Sync GID/UIDs
+# [OPTIONAL] Sync GID/UIDs
 ### LDAP Account Manager
 You can follow this [guide](https://computingforgeeks.com/install-and-configure-openldap-server-ubuntu/) to install and configure LDAP Account Manager.  
 
