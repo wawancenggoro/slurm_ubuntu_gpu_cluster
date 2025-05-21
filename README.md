@@ -272,6 +272,11 @@ If the above still doesn't work, add ```Port 22``` for ssh by adding the followi
 Port 22
 ```
 
+If it hangs when requesting multiple nodes, it might be caused by firewall. Turn off firewall:
+```
+sudo systemctl stop ufw
+```
+
 Then, set passwordless ssh from worker nodes to master node (see the **Set up passwordless ssh section above**).
 
 # Logs
