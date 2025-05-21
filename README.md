@@ -253,6 +253,8 @@ Reboot machines and:
 on master_node:
 ```
 sudo systemctl restart slurmctld & sudo systemctl restart slurmdbd & sudo systemctl restart slurmd
+sudo su slurm
+scontrol update NodeName=masternode,workernode1,workernode2 State=RESUME
 ```
 on worker_node:
 ```
